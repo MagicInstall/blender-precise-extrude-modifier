@@ -1,56 +1,55 @@
 # Precise Hard Surface Inflate
 
-A Blender add-on for fast, controllable inflation of hard-surface mesh selections. It is designed for mechanical, sci-fi, industrial, and product-style forms that need clean outward expansion while keeping borders and hard edges stable.
+A Blender add-on for fast, controllable inflation of hard-surface mesh selections, designed for mechanical, product, sci-fi, and industrial modeling workflows.
 
 ## Features
 
-- Inflates selected mesh geometry along local or world normals
-- Retains border vertices to reduce unwanted tearing
-- Optional smoothing passes for cleaner transitions
-- Supports both Object Mode and Edit Mode
-- Clean panel under 3D View > Sidebar > Hard Surface
-- **Automatic update checking with one-click installation**
+- Local or world-space inflation
+- Border retention to reduce tearing and artifacts
+- Edit Mode and Object Mode support
+- Optional smoothing after inflation
+- GitHub Releases based update detection and one-click installation
+- Clean sidebar panel in 3D View
 
 ## Installation
 
-1. Open Blender.
-2. Go to Edit > Preferences > Add-ons.
-3. Click "Install…"
-4. Select this repository's `__init__.py` file or download the `.zip`.
-5. Enable the add-on named "Precise Hard Surface Inflate".
+Recommended install method:
+
+1. Download the latest release zip from the GitHub Releases page.
+2. In Blender, open Edit > Preferences > Add-ons.
+3. Click Install…
+4. Select the zip file.
+5. Enable "Precise Hard Surface Inflate".
+
+Developer install:
+
+1. Clone or download this repository.
+2. Copy the `precise_hard_surface_inflate` directory into Blender's user addons folder.
+3. Restart Blender and enable the add-on.
 
 ## Usage
 
-1. Select one or more mesh objects.
-2. Open the sidebar in the 3D View (`N` key).
-3. Go to the "Hard Surface" tab.
-4. Adjust the inflate amount and mode.
+1. Select a mesh object.
+2. Go to the 3D View sidebar.
+3. Open the "Hard Surface" tab.
+4. Adjust inflate amount and settings.
 5. Click "Apply Inflate".
 
-## Automatic Updates
+## Update system
 
-The add-on will automatically check for new versions when Blender starts. If an update is available:
+The add-on checks GitHub Releases on load and can show an update button when a newer version is published. This is the most stable way to support auto-updates without depending on Blender's native add-on marketplace integration.
 
-1. You'll see "Update available: X.X.X" in the Hard Surface panel
-2. Click "Download & Install Update" to fetch and install automatically
-3. Restart Blender to load the new version
+## Release workflow
 
-You can also manually check for updates by clicking "Check for Updates".
+This repository includes a GitHub Actions release workflow that creates a distributable zip package from the add-on folder and uploads it as a release asset.
 
-## Recommended Workflow
+## Versioning
 
-- Use a small inflate amount for precision shelling.
-- Enable "Keep Border" for mechanical parts with sharp boundaries.
-- Use world-space normal mode for large-scale object offsets.
-- Use smoothing only after the main inflate pass.
+Use semantic versioning in Git tags, for example:
 
-## Updating
-
-New versions are published on GitHub Releases. The add-on will automatically detect them and notify you in the UI.
-
-## Notes
-
-This add-on is intentionally lightweight and optimized for practical hard-surface modeling tasks. It does not attempt to mimic a full Blender modifier stack, but it behaves like a fast sculpt-style inflation utility for complex, precisely controlled mesh expansion.
+- v1.0.0
+- v1.1.0
+- v1.2.3
 
 ## Repository
 

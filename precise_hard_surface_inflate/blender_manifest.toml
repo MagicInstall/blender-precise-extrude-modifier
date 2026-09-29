@@ -1,0 +1,10 @@
+schema_version = "1.0"
+id = "precise_hard_surface_inflate"
+name = "Precise Hard Surface Inflate"
+version = "1.0.1"
+tagline = "Hard surface inflation with normal control and border retention"
+maintainer = "MagicInstall"
+type = "add-on"
+blender_version_min = "3.6.0"
+license = ["GPL-3.0-or-later"]
+website = "https://github.com/MagicInstall/blender-precise-extrude-modifier"
