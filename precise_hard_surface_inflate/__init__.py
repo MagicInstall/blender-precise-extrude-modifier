@@ -57,6 +57,10 @@ class PHSI_MOD_PreciseExtrude(Modifier):
     bl_label = "Precise Extrude"
     bl_icon = 'MOD_SOLIDIFY'
     
+    # Set modifier category to GENERATE (生成)
+    # This puts it in the same category as Boolean, Array, etc.
+    bl_options = set()
+    
     # Modifier properties
     inflate_amount: FloatProperty(
         name="Amount",
