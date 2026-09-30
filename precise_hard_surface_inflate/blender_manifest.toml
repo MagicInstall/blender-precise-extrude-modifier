@@ -1,7 +1,7 @@
 schema_version = "1.0"
 id = "precise_hard_surface_inflate"
 name = "Precise Hard Surface Inflate"
-version = "1.0.1"
+version = "0.1"
 tagline = "Hard surface inflation with normal control and border retention"
 maintainer = "MagicInstall"
 type = "add-on"

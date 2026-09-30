@@ -9,7 +9,7 @@ import zipfile
 bl_info = {
     "name": "Precise Hard Surface Inflate",
     "author": "MagicInstall",
-    "version": (1, 0, 1),
+    "version": (0, 1, 0),
     "blender": (3, 6, 0),
     "location": "View3D > Sidebar > Hard Surface",
     "description": "Inflate selected hard-surface mesh regions with precise normal control and border retention.",
