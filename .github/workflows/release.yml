@@ -1,0 +1,54 @@
+name: Release Blender Add-on
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    env:
+      ADDON_DIR: precise_hard_surface_inflate
+      ZIP_NAME: precise_hard_surface_inflate.zip
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate add-on package
+        shell: bash
+        run: |
+          set -e
+          test -f "$ADDON_DIR/__init__.py"
+          test -f "$ADDON_DIR/blender_manifest.toml"
+          python - <<'PY'
+          import tomllib
+          from pathlib import Path
+          manifest = Path('precise_hard_surface_inflate/blender_manifest.toml')
+          data = tomllib.loads(manifest.read_text(encoding='utf-8'))
+          print('manifest version:', data.get('version'))
+          print('addon id:', data.get('id'))
+          PY
+
+      - name: Create distributable zip
+        shell: bash
+        run: |
+          set -e
+          cd "$GITHUB_WORKSPACE"
+          rm -f "$ZIP_NAME"
+          zip -r "$ZIP_NAME" "$ADDON_DIR"
+          ls -lh "$ZIP_NAME"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            ${{ env.ZIP_NAME }}
+          generate_release_notes: true
+          draft: false
+          prerelease: false
