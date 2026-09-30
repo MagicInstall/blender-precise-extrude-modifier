@@ -13,7 +13,7 @@ class PHSIProperties(PropertyGroup):
     inflate_amount: FloatProperty(
         name="Inflate Amount",
         description="How far to push selected vertices along their normals",
-        default=0.02,
+        default=0.2,
         min=-2.0,
         max=10.0,
         precision=4,
@@ -65,7 +65,7 @@ class PHSI_MOD_PreciseExtrude(Modifier):
     inflate_amount: FloatProperty(
         name="Amount",
         description="How far to push vertices along their normals",
-        default=0.02,
+        default=0.2,
         min=-2.0,
         max=10.0,
         precision=4,
