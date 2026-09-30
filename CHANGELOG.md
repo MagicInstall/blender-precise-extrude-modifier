@@ -1,22 +1,22 @@
 # Changelog
 
-## [1.0.1] - 2026-09-29
+## [0.1] - 2026-09-29
 
 ### Added
-- explicit release/package structure for long-term maintenance
-- GitHub Actions workflow to build a release zip
-- modular update checker separated from core mesh logic
-- compatibility wrapper for direct install from repo root
-- documentation for release and install workflow
+- Initial release of Precise Hard Surface Inflate add-on
+- Mesh inflation with local or world-space normal control
+- Border vertex retention to prevent tearing
+- Optional smoothing passes after inflation
+- Support for both Object Mode and Edit Mode
+- Sidebar panel controls in 3D View
+- Automatic update checking with GitHub Releases integration
+- One-click update installation
+- GitHub Actions workflow for automated release packaging
+- Distributable zip package format for easy installation
 
-### Changed
-- add-on code organized into an installable package folder
-- update path cleaned for better maintainability
-
-## [1.0.0] - 2026-09-29
-
-### Added
-- initial precise inflate add-on prototype
-- object and edit mode inflation
-- smoothing and border retention options
-- sidebar controls and update check panel
+### Features
+- Precise hard-surface mesh expansion
+- World and local normal inflation modes
+- Configurable smoothing iterations
+- Border vertex preservation
+- Built-in update checker with download/install functionality
